@@ -1,0 +1,989 @@
+.sales-routes-history-page {
+  min-height: 100dvh;
+
+  padding:
+    34px
+    38px
+    60px;
+
+  background:
+    var(
+      --waki-background,
+      #faf9fe
+    );
+}
+
+
+.sales-routes-history-header {
+  margin-bottom:
+    23px;
+}
+
+
+.sales-routes-history-header h1 {
+  margin:
+    0;
+
+  color:
+    #21103f;
+
+  font-size:
+    clamp(
+      29px,
+      4vw,
+      38px
+    );
+
+  line-height:
+    1.08;
+
+  letter-spacing:
+    -0.9px;
+}
+
+
+.sales-routes-history-header p {
+  margin:
+    7px
+    0
+    0;
+
+  color:
+    #83778d;
+
+  font-size:
+    13px;
+}
+
+
+/* ACTIVE */
+
+.sales-active-route-banner {
+  display:
+    grid;
+
+  grid-template-columns:
+    auto
+    minmax(
+      0,
+      1fr
+    )
+    auto;
+
+  align-items:
+    center;
+
+  gap:
+    16px;
+
+  margin-bottom:
+    18px;
+
+  padding:
+    19px;
+
+  border:
+    1px solid
+    #d9ccf6;
+
+  border-radius:
+    20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3edff,
+      #ffffff
+    );
+
+  box-shadow:
+    0
+    8px
+    24px
+    rgba(
+      68,
+      39,
+      119,
+      0.05
+    );
+}
+
+
+.sales-active-route-banner__icon {
+  width:
+    46px;
+
+  height:
+    46px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    14px;
+
+  background:
+    #7441db;
+
+  color:
+    #ffffff;
+}
+
+
+.sales-active-route-banner__content {
+  min-width:
+    0;
+}
+
+
+.sales-active-route-banner__content > span {
+  display:
+    block;
+
+  margin-bottom:
+    3px;
+
+  color:
+    #7441db;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+.sales-active-route-banner h2 {
+  margin:
+    0;
+
+  color:
+    #2b174b;
+
+  font-size:
+    18px;
+}
+
+
+.sales-active-route-banner p {
+  margin:
+    5px 0 9px;
+
+  color:
+    #756a7f;
+
+  font-size:
+    11px;
+}
+
+
+.sales-active-route-progress {
+  max-width:
+    360px;
+
+  height:
+    6px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    999px;
+
+  background:
+    #ded5ec;
+}
+
+
+.sales-active-route-progress > div {
+  height:
+    100%;
+
+  border-radius:
+    inherit;
+
+  background:
+    #7441db;
+}
+
+
+.sales-continue-route {
+  min-height:
+    42px;
+
+  padding:
+    0 15px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    7px;
+
+  border:
+    0;
+
+  border-radius:
+    12px;
+
+  background:
+    #7040d5;
+
+  color:
+    #ffffff;
+
+  font:
+    inherit;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* STATS */
+
+.sales-route-history-stats {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    12px;
+
+  margin-bottom:
+    18px;
+}
+
+
+.sales-route-history-stats article {
+  padding:
+    17px;
+
+  border:
+    1px solid
+    #ebe6f0;
+
+  border-radius:
+    18px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0
+    7px
+    20px
+    rgba(
+      43,
+      22,
+      78,
+      0.035
+    );
+}
+
+
+.sales-route-history-stats article > div {
+  width:
+    34px;
+
+  height:
+    34px;
+
+  margin-bottom:
+    11px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    11px;
+
+  background:
+    #f1ebfd;
+
+  color:
+    #7441db;
+}
+
+
+.sales-route-history-stats span {
+  display:
+    block;
+
+  margin-bottom:
+    5px;
+
+  color:
+    #8c8294;
+
+  font-size:
+    10px;
+}
+
+
+.sales-route-history-stats strong {
+  color:
+    #2d194c;
+
+  font-size:
+    23px;
+}
+
+
+/* SECTION */
+
+.sales-route-history-section {
+  padding:
+    20px;
+
+  border:
+    1px solid
+    #ebe6f0;
+
+  border-radius:
+    20px;
+
+  background:
+    #ffffff;
+}
+
+
+.sales-route-history-section__header {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  padding-bottom:
+    16px;
+
+  border-bottom:
+    1px solid
+    #f0edf3;
+}
+
+
+.sales-route-history-section__header h2 {
+  margin:
+    0;
+
+  color:
+    #2d1b49;
+
+  font-size:
+    16px;
+}
+
+
+.sales-route-history-section__header p {
+  margin:
+    5px
+    0
+    0;
+
+  color:
+    #91879a;
+
+  font-size:
+    11px;
+}
+
+
+.sales-route-history-section__header > span {
+  padding:
+    6px 10px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f1ecfb;
+
+  color:
+    #7040d5;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+}
+
+
+/* LIST */
+
+.sales-route-history-list {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    13px;
+
+  padding-top:
+    17px;
+}
+
+
+.sales-route-history-card {
+  padding:
+    16px;
+
+  border:
+    1px solid
+    #ece7f0;
+
+  border-radius:
+    17px;
+
+  background:
+    #ffffff;
+}
+
+
+.sales-route-history-card__top {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    13px;
+}
+
+
+.sales-route-history-card__identity {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  min-width:
+    0;
+}
+
+
+.sales-route-history-card__icon {
+  width:
+    39px;
+
+  height:
+    39px;
+
+  flex:
+    0 0 39px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    12px;
+
+  background:
+    #f1ebfd;
+
+  color:
+    #7441db;
+}
+
+
+.sales-route-history-card h3 {
+  margin:
+    0;
+
+  color:
+    #2c1a48;
+
+  font-size:
+    14px;
+}
+
+
+.sales-route-history-card__identity p {
+  margin:
+    5px
+    0
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  color:
+    #948a9c;
+
+  font-size:
+    10px;
+}
+
+
+/* STATUS */
+
+.sales-route-history-status {
+  padding:
+    5px 9px;
+
+  border-radius:
+    999px;
+
+  font-size:
+    9px;
+
+  font-weight:
+    800;
+
+  white-space:
+    nowrap;
+}
+
+
+.sales-route-history-status.is-planned {
+  background:
+    #eee8ff;
+
+  color:
+    #6735cb;
+}
+
+
+.sales-route-history-status.is-progress {
+  background:
+    #fff1d8;
+
+  color:
+    #9d6206;
+}
+
+
+.sales-route-history-status.is-completed {
+  background:
+    #e5f7ed;
+
+  color:
+    #257049;
+}
+
+
+.sales-route-history-status.is-cancelled {
+  background:
+    #f6e7e9;
+
+  color:
+    #9a4148;
+}
+
+
+/* PROGRESS */
+
+.sales-route-history-card__progress {
+  margin-top:
+    16px;
+}
+
+
+.sales-route-history-card__progress-copy {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    7px;
+}
+
+
+.sales-route-history-card__progress-copy span {
+  color:
+    #978e9e;
+
+  font-size:
+    10px;
+}
+
+
+.sales-route-history-card__progress-copy strong {
+  color:
+    #55485f;
+
+  font-size:
+    10px;
+}
+
+
+.sales-route-history-track {
+  height:
+    6px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    999px;
+
+  background:
+    #eeeaf2;
+}
+
+
+.sales-route-history-track div {
+  height:
+    100%;
+
+  border-radius:
+    inherit;
+
+  background:
+    #7441db;
+}
+
+
+.sales-route-history-card__progress small {
+  display:
+    block;
+
+  margin-top:
+    5px;
+
+  color:
+    #978e9e;
+
+  font-size:
+    9px;
+
+  text-align:
+    right;
+}
+
+
+/* META */
+
+.sales-route-history-meta {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    6px;
+
+  margin-top:
+    13px;
+}
+
+
+.sales-route-history-meta > div {
+  min-width:
+    0;
+
+  padding:
+    8px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  border-radius:
+    10px;
+
+  background:
+    #faf8fc;
+
+  color:
+    #7b6d87;
+
+  font-size:
+    9px;
+}
+
+
+.sales-route-history-meta svg {
+  flex:
+    0 0 auto;
+
+  color:
+    #8759df;
+}
+
+
+/* ACTION */
+
+.sales-route-history-action {
+  width:
+    100%;
+
+  min-height:
+    38px;
+
+  margin-top:
+    13px;
+
+  padding:
+    0 11px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  border:
+    0;
+
+  border-radius:
+    11px;
+
+  background:
+    #f0eafd;
+
+  color:
+    #6534c9;
+
+  font:
+    inherit;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* EMPTY */
+
+.sales-route-history-empty {
+  min-height:
+    250px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  color:
+    #90869a;
+}
+
+
+.sales-route-history-empty svg {
+  color:
+    #8050dd;
+}
+
+
+.sales-route-history-empty h3 {
+  margin:
+    11px 0 5px;
+
+  color:
+    #473752;
+
+  font-size:
+    14px;
+}
+
+
+.sales-route-history-empty p {
+  margin:
+    0 0 14px;
+
+  font-size:
+    11px;
+}
+
+
+.sales-route-history-empty button {
+  min-height:
+    39px;
+
+  padding:
+    0 14px;
+
+  border:
+    0;
+
+  border-radius:
+    11px;
+
+  background:
+    #7040d5;
+
+  color:
+    #ffffff;
+
+  font:
+    inherit;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  cursor:
+    pointer;
+}
+
+
+/* MOBILE */
+
+@media (
+  max-width:
+  850px
+) {
+
+  .sales-routes-history-page {
+    padding:
+      22px
+      16px
+      calc(
+        95px +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+  }
+
+
+  .sales-active-route-banner {
+    grid-template-columns:
+      auto
+      1fr;
+  }
+
+
+  .sales-continue-route {
+    grid-column:
+      1 / -1;
+
+    width:
+      100%;
+  }
+
+
+  .sales-route-history-stats {
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+
+    gap:
+      8px;
+  }
+
+
+  .sales-route-history-stats article {
+    padding:
+      13px;
+  }
+
+
+  .sales-route-history-list {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .sales-route-history-meta {
+    grid-template-columns:
+      1fr;
+  }
+
+}

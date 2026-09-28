@@ -1,0 +1,117 @@
+/* =========================================================
+   WAKI VENTAS — ROUTE RESULT
+   ========================================================= */
+
+.sales-generated-route {
+  margin-top: 16px;
+  overflow: hidden;
+  border: 1px solid var(--waki-border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.sales-generated-route__summary {
+  padding: 15px;
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  border-bottom: 1px solid #eee9f2;
+  background: #faf8ff;
+}
+
+.sales-generated-route__summary > div {
+  min-width: 0;
+}
+
+.sales-generated-route__summary span,
+.sales-generated-route__summary strong {
+  display: block;
+}
+
+.sales-generated-route__summary span {
+  color: #8e8698;
+  font-size: 8px;
+}
+
+.sales-generated-route__summary strong {
+  margin-top: 4px;
+  color: #2c2438;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sales-generated-route__stops {
+  padding: 5px 15px;
+}
+
+.sales-route-stop-row {
+  min-height: 61px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid #f0ecf3;
+}
+
+.sales-route-stop-row:last-child {
+  border-bottom: 0;
+}
+
+.sales-route-stop-number {
+  width: 31px;
+  height: 31px;
+  flex: 0 0 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--waki-purple-soft);
+  color: var(--waki-purple-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.sales-route-stop-copy {
+  min-width: 0;
+}
+
+.sales-route-stop-copy strong,
+.sales-route-stop-copy span {
+  display: block;
+}
+
+.sales-route-stop-copy strong {
+  overflow: hidden;
+  color: #2f2937;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sales-route-stop-copy span {
+  margin-top: 4px;
+  color: #8c8494;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+@media (max-width: 600px) {
+  .sales-generated-route__summary {
+    padding: 13px;
+    gap: 5px;
+  }
+
+  .sales-generated-route__summary strong {
+    font-size: 12px;
+  }
+
+  .sales-generated-route__stops {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .sales-route-stop-row {
+    min-height: 64px;
+  }
+}

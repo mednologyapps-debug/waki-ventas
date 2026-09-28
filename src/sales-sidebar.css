@@ -1,0 +1,970 @@
+/* =========================================================
+   WAKI VENTAS
+   SIDEBAR + LAYOUT CANONICAL
+   ========================================================= */
+
+:root {
+  --waki-sales-sidebar-width: 250px;
+  --waki-sales-mobile-header-height: 64px;
+}
+
+
+/* =========================================================
+   PORTAL
+   ========================================================= */
+
+.sales-portal {
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  position: relative !important;
+
+  background:
+    var(
+      --waki-background,
+      #faf9fe
+    ) !important;
+
+  overflow-x: hidden !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sales-sidebar--reference {
+  width:
+    var(
+      --waki-sales-sidebar-width
+    ) !important;
+
+  min-width:
+    var(
+      --waki-sales-sidebar-width
+    ) !important;
+
+  max-width:
+    var(
+      --waki-sales-sidebar-width
+    ) !important;
+
+  height: 100vh !important;
+  height: 100dvh !important;
+
+  position: fixed !important;
+
+  inset:
+    0 auto 0 0 !important;
+
+  z-index:
+    1000 !important;
+
+  margin:
+    0 !important;
+
+  padding:
+    21px
+    16px
+    14px !important;
+
+  box-sizing:
+    border-box !important;
+
+  display:
+    flex !important;
+
+  flex-direction:
+    column !important;
+
+  justify-content:
+    flex-start !important;
+
+  overflow:
+    hidden !important;
+
+  color:
+    #ffffff !important;
+
+  background-color:
+    #7355e8 !important;
+
+  background-image:
+    var(
+      --waki-sales-sidebar-background
+    ) !important;
+
+  background-repeat:
+    no-repeat !important;
+
+  background-position:
+    left bottom !important;
+
+  background-size:
+    cover !important;
+}
+
+
+.sales-sidebar--reference::before {
+  display:
+    none !important;
+}
+
+
+.sales-sidebar-ref__top {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    100%;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.sales-sidebar-ref__brand {
+  height:
+    55px;
+
+  padding:
+    0 7px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+}
+
+
+.sales-sidebar-ref__brand img {
+  width:
+    99px;
+
+  max-width:
+    99px;
+
+  height:
+    auto;
+
+  display:
+    block;
+
+  object-fit:
+    contain;
+}
+
+
+.sales-sidebar-ref__brand > span {
+  height:
+    25px;
+
+  padding:
+    0 9px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    7px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.17
+    );
+
+  color:
+    #ffffff;
+
+  font-size:
+    10px;
+
+  font-weight:
+    600;
+}
+
+
+/* =========================================================
+   PERFIL
+   ========================================================= */
+
+.sales-sidebar-ref__profile {
+  width:
+    100%;
+
+  height:
+    70px;
+
+  margin-top:
+    17px;
+
+  padding:
+    10px 11px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  box-sizing:
+    border-box;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.21
+    );
+
+  border-radius:
+    12px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.10
+    );
+
+  backdrop-filter:
+    blur(4px);
+}
+
+
+.sales-sidebar-ref__avatar {
+  width:
+    45px;
+
+  height:
+    45px;
+
+  flex:
+    0 0 45px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.30
+    );
+
+  border-radius:
+    9px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.14
+    );
+
+  color:
+    #ffffff;
+
+  font-size:
+    15px;
+
+  font-weight:
+    700;
+}
+
+
+.sales-sidebar-ref__profile-copy {
+  min-width:
+    0;
+
+  flex:
+    1;
+}
+
+
+.sales-sidebar-ref__profile-copy strong {
+  display:
+    block;
+
+  overflow:
+    hidden;
+
+  color:
+    #ffffff;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  text-overflow:
+    ellipsis;
+
+  white-space:
+    nowrap;
+}
+
+
+.sales-sidebar-ref__profile-copy span {
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.74
+    );
+
+  font-size:
+    9px;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.sales-sidebar-ref__menu {
+  width:
+    100%;
+
+  margin-top:
+    22px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+}
+
+
+.sales-sidebar-ref__item {
+  width:
+    100%;
+
+  height:
+    46px;
+
+  padding:
+    0 11px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  border:
+    0;
+
+  border-radius:
+    11px;
+
+  box-sizing:
+    border-box;
+
+  background:
+    transparent;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  font:
+    inherit;
+
+  font-size:
+    12px;
+
+  font-weight:
+    500;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+}
+
+
+.sales-sidebar-ref__item:hover {
+  color:
+    #ffffff;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.10
+    );
+}
+
+
+.sales-sidebar-ref__item.is-active {
+  color:
+    #ffffff;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+}
+
+
+/* =========================================================
+   LOGOUT
+   AHORA VA DEBAJO DEL MENÚ
+   ========================================================= */
+
+.sales-sidebar-ref__logout {
+  width:
+    100%;
+
+  min-height:
+    45px;
+
+  margin-top:
+    26px;
+
+  padding:
+    0 12px;
+
+  box-sizing:
+    border-box;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.17
+    );
+
+  border-radius:
+    11px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.10
+    );
+
+  color:
+    #ffffff;
+
+  font:
+    inherit;
+
+  font-size:
+    11px;
+
+  font-weight:
+    500;
+
+  cursor:
+    pointer;
+
+  transition:
+    background
+    0.16s ease;
+}
+
+
+.sales-sidebar-ref__logout:hover {
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.17
+    );
+}
+
+
+/* =========================================================
+   DESKTOP CONTENT
+   ========================================================= */
+
+@media (
+  min-width:
+  851px
+) {
+
+  .sales-portal {
+    width:
+      100vw !important;
+
+    max-width:
+      100vw !important;
+  }
+
+
+.sales-portal > main,
+.sales-dashboard,
+.sales-route-page,
+.sales-hotels-page,
+.sales-hotel-detail-page
+.sales-routes-history-page{
+    position:
+      relative !important;
+
+    display:
+      block !important;
+
+    width:
+      calc(
+        100vw -
+        var(
+          --waki-sales-sidebar-width
+        )
+      ) !important;
+
+    min-width:
+      calc(
+        100vw -
+        var(
+          --waki-sales-sidebar-width
+        )
+      ) !important;
+
+    max-width:
+      calc(
+        100vw -
+        var(
+          --waki-sales-sidebar-width
+        )
+      ) !important;
+
+    margin:
+      0 0 0
+      var(
+        --waki-sales-sidebar-width
+      ) !important;
+
+    box-sizing:
+      border-box !important;
+  }
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.sales-dashboard {
+  min-height:
+    100dvh;
+
+  padding:
+    34px
+    38px
+    48px;
+
+  background:
+    var(
+      --waki-background,
+      #faf9fe
+    );
+}
+
+
+.sales-header-logout {
+  display:
+    none !important;
+}
+
+
+/* =========================================================
+   MOBILE HEADER
+   ========================================================= */
+
+.sales-mobile-nav {
+  display:
+    none;
+}
+
+
+.sales-mobile-drawer-overlay {
+  display:
+    none;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width:
+  850px
+) {
+
+  .sales-mobile-nav {
+    height:
+      var(
+        --waki-sales-mobile-header-height
+      );
+
+    padding:
+      env(
+        safe-area-inset-top
+      )
+      16px
+      0;
+
+    position:
+      fixed;
+
+    top:
+      0;
+
+    left:
+      0;
+
+    right:
+      0;
+
+    z-index:
+      2400;
+
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    justify-content:
+      space-between;
+
+    box-sizing:
+      content-box;
+
+    background:
+      #7355e8;
+  }
+
+
+  .sales-mobile-nav__brand {
+    display:
+      flex;
+
+    align-items:
+      center;
+
+    gap:
+      9px;
+  }
+
+
+  .sales-mobile-nav__brand img {
+    width:
+      87px;
+
+    height:
+      auto;
+  }
+
+
+  .sales-mobile-nav__brand span {
+    height:
+      23px;
+
+    padding:
+      0 8px;
+
+    display:
+      inline-flex;
+
+    align-items:
+      center;
+
+    border-radius:
+      6px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.16
+      );
+
+    color:
+      #ffffff;
+
+    font-size:
+      9px;
+
+    font-weight:
+      600;
+  }
+
+
+  .sales-mobile-nav__toggle {
+    width:
+      42px;
+
+    height:
+      42px;
+
+    display:
+      grid;
+
+    place-items:
+      center;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.20
+      );
+
+    border-radius:
+      11px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.12
+      );
+
+    color:
+      #ffffff;
+  }
+
+
+  .sales-sidebar--reference {
+    width:
+      min(
+        86vw,
+        325px
+      ) !important;
+
+    min-width:
+      min(
+        86vw,
+        325px
+      ) !important;
+
+    max-width:
+      min(
+        86vw,
+        325px
+      ) !important;
+
+    height:
+      100dvh !important;
+
+    padding:
+      calc(
+        18px +
+        env(
+          safe-area-inset-top
+        )
+      )
+      16px
+      calc(
+        16px +
+        env(
+          safe-area-inset-bottom
+        )
+      ) !important;
+
+    position:
+      fixed !important;
+
+    inset:
+      0 auto 0 0 !important;
+
+    z-index:
+      2600 !important;
+
+    overflow-y:
+      auto !important;
+
+    transform:
+      translateX(
+        -105%
+      );
+
+    transition:
+      transform
+      0.24s ease;
+  }
+
+
+  .sales-sidebar--reference.is-mobile-open {
+    transform:
+      translateX(0);
+  }
+
+
+  .sales-mobile-drawer-overlay {
+    position:
+      fixed;
+
+    inset:
+      0;
+
+    z-index:
+      2500;
+
+    display:
+      block;
+
+    border:
+      0;
+
+    background:
+      rgba(
+        22,
+        13,
+        43,
+        0.52
+      );
+
+    opacity:
+      0;
+
+    visibility:
+      hidden;
+
+    pointer-events:
+      none;
+  }
+
+
+  .sales-mobile-drawer-overlay.is-open {
+    opacity:
+      1;
+
+    visibility:
+      visible;
+
+    pointer-events:
+      auto;
+  }
+
+
+  .sales-portal {
+    padding-top:
+      calc(
+        var(
+          --waki-sales-mobile-header-height
+        ) +
+        env(
+          safe-area-inset-top
+        )
+      ) !important;
+  }
+
+
+  .sales-portal > main,
+.sales-dashboard,
+.sales-route-page,
+.sales-hotels-page,
+.sales-hotel-detail-page
+.sales-routes-history-page {
+    width:
+      100% !important;
+
+    min-width:
+      0 !important;
+
+    max-width:
+      100% !important;
+
+    margin:
+      0 !important;
+
+    box-sizing:
+      border-box !important;
+  }
+
+
+  .sales-sidebar-ref__logout {
+    margin-top:
+      24px;
+
+    min-height:
+      48px;
+  }
+
+}

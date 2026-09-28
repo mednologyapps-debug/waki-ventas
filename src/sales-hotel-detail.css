@@ -1,0 +1,1544 @@
+/* =========================================================
+   WAKI VENTAS
+   FICHA DE HOTEL
+   ========================================================= */
+
+.sales-hotel-detail-page {
+  min-height: 100dvh;
+
+  padding:
+    34px
+    38px
+    60px;
+
+  background:
+    var(
+      --waki-background,
+      #faf9fe
+    );
+}
+
+
+/* HEADER */
+
+.sales-hotel-detail-header {
+  display: flex;
+
+  align-items:
+    center;
+
+  gap:
+    15px;
+
+  margin-bottom:
+    24px;
+}
+
+
+.sales-hotel-detail-back {
+  width:
+    42px;
+
+  height:
+    42px;
+
+  flex:
+    0 0 42px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    #e5dfed;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+
+  color:
+    #5e536b;
+
+  cursor:
+    pointer;
+}
+
+
+.sales-hotel-detail-header__copy {
+  flex:
+    1;
+
+  min-width:
+    0;
+}
+
+
+.sales-hotel-detail-header h1 {
+  margin:
+    0;
+
+  color:
+    #21103f;
+
+  font-size:
+    clamp(
+      27px,
+      4vw,
+      36px
+    );
+
+  line-height:
+    1.1;
+
+  letter-spacing:
+    -0.8px;
+}
+
+
+.sales-hotel-detail-header p {
+  margin:
+    7px
+    0
+    0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
+
+  color:
+    #81768c;
+
+  font-size:
+    13px;
+}
+
+
+/* GRID */
+
+.sales-hotel-detail-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1.7fr
+    )
+    minmax(
+      270px,
+      0.75fr
+    );
+
+  gap:
+    16px;
+
+  margin-bottom:
+    18px;
+}
+
+
+/* INFORMACIÓN */
+
+.sales-hotel-info-card,
+.sales-hotel-summary-card,
+.sales-hotel-history {
+  background:
+    #ffffff;
+
+  border:
+    1px solid
+    #ebe6f0;
+
+  border-radius:
+    20px;
+
+  box-shadow:
+    0
+    8px
+    24px
+    rgba(
+      43,
+      24,
+      74,
+      0.04
+    );
+}
+
+
+.sales-hotel-info-card {
+  padding:
+    20px;
+}
+
+
+.sales-hotel-info-card__heading {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    11px;
+
+  padding-bottom:
+    17px;
+
+  border-bottom:
+    1px solid
+    #f0edf3;
+}
+
+
+.sales-hotel-info-card__icon {
+  width:
+    42px;
+
+  height:
+    42px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    13px;
+
+  background:
+    #f0eafd;
+
+  color:
+    #7040d5;
+}
+
+
+.sales-hotel-info-card h2,
+.sales-hotel-summary-card h2,
+.sales-hotel-history h2 {
+  margin:
+    0;
+
+  color:
+    #2a1946;
+
+  font-size:
+    16px;
+}
+
+
+.sales-hotel-info-card__heading p {
+  margin:
+    4px
+    0
+    0;
+
+  color:
+    #938a9d;
+
+  font-size:
+    11px;
+}
+
+
+.sales-hotel-info-list {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    10px;
+
+  margin-top:
+    17px;
+}
+
+
+.sales-hotel-info-list > div {
+  min-width:
+    0;
+
+  display:
+    flex;
+
+  gap:
+    10px;
+
+  padding:
+    12px;
+
+  border-radius:
+    14px;
+
+  background:
+    #faf9fc;
+
+  color:
+    #7b6e87;
+}
+
+
+.sales-hotel-info-list svg {
+  flex:
+    0 0 auto;
+
+  margin-top:
+    2px;
+
+  color:
+    #8151df;
+}
+
+
+.sales-hotel-info-list span {
+  display:
+    block;
+
+  margin-bottom:
+    4px;
+
+  color:
+    #9a91a3;
+
+  font-size:
+    10px;
+}
+
+
+.sales-hotel-info-list strong {
+  display:
+    block;
+
+  color:
+    #4b4056;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.45;
+
+  overflow-wrap:
+    anywhere;
+}
+
+
+/* ACTIONS */
+
+.sales-hotel-detail-actions {
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    9px;
+
+  margin-top:
+    17px;
+}
+
+
+.sales-hotel-detail-actions button {
+  min-height:
+    42px;
+
+  padding:
+    0 14px;
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    7px;
+
+  border:
+    1px solid
+    #e0d8ea;
+
+  border-radius:
+    12px;
+
+  background:
+    #ffffff;
+
+  color:
+    #5f526b;
+
+  font:
+    inherit;
+
+  font-size:
+    12px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+}
+
+
+.sales-hotel-detail-actions button.is-primary {
+  border-color:
+    #7040d5;
+
+  background:
+    #7040d5;
+
+  color:
+    #ffffff;
+}
+
+
+/* SUMMARY */
+
+.sales-hotel-summary-card {
+  padding:
+    20px;
+}
+
+
+.sales-hotel-summary-stat {
+  margin-top:
+    18px;
+
+  padding:
+    18px;
+
+  border-radius:
+    16px;
+
+  background:
+    #f3edff;
+}
+
+
+.sales-hotel-summary-stat span {
+  display:
+    block;
+
+  margin-bottom:
+    7px;
+
+  color:
+    #81728e;
+
+  font-size:
+    11px;
+}
+
+
+.sales-hotel-summary-stat strong {
+  color:
+    #5422b9;
+
+  font-size:
+    30px;
+}
+
+
+.sales-hotel-summary-row {
+  display:
+    flex;
+
+  gap:
+    10px;
+
+  padding:
+    14px
+    2px;
+
+  border-bottom:
+    1px solid
+    #f0edf3;
+
+  color:
+    #8151df;
+}
+
+
+.sales-hotel-summary-row:last-of-type {
+  border-bottom:
+    0;
+}
+
+
+.sales-hotel-summary-row span {
+  display:
+    block;
+
+  margin-bottom:
+    3px;
+
+  color:
+    #978d9f;
+
+  font-size:
+    10px;
+}
+
+
+.sales-hotel-summary-row strong {
+  display:
+    block;
+
+  color:
+    #4b4055;
+
+  font-size:
+    11px;
+}
+
+
+.sales-hotel-assigned {
+  margin-top:
+    13px;
+
+  padding:
+    10px
+    12px;
+
+  border-radius:
+    12px;
+
+  background:
+    #eee8ff;
+
+  color:
+    #6736ca;
+
+  font-size:
+    11px;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.45;
+}
+
+
+/* HISTORIAL */
+
+.sales-hotel-history {
+  padding:
+    20px;
+}
+
+
+.sales-hotel-history__header {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  padding-bottom:
+    17px;
+
+  border-bottom:
+    1px solid
+    #f0edf3;
+}
+
+
+.sales-hotel-history__header p {
+  margin:
+    5px
+    0
+    0;
+
+  color:
+    #91879a;
+
+  font-size:
+    11px;
+}
+
+
+.sales-hotel-history__header > span {
+  padding:
+    6px
+    10px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f1ecfb;
+
+  color:
+    #7040d5;
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  white-space:
+    nowrap;
+}
+
+
+/* TIMELINE */
+
+.sales-hotel-timeline {
+  padding-top:
+    18px;
+}
+
+
+.sales-hotel-visit {
+  display:
+    grid;
+
+  grid-template-columns:
+    22px
+    minmax(
+      0,
+      1fr
+    );
+}
+
+
+.sales-hotel-visit__timeline {
+  position:
+    relative;
+}
+
+
+.sales-hotel-visit__dot {
+  position:
+    absolute;
+
+  top:
+    5px;
+
+  left:
+    6px;
+
+  width:
+    10px;
+
+  height:
+    10px;
+
+  border-radius:
+    50%;
+
+  background:
+    #7441db;
+
+  box-shadow:
+    0
+    0
+    0
+    4px
+    #eee8ff;
+}
+
+
+.sales-hotel-visit__line {
+  position:
+    absolute;
+
+  top:
+    19px;
+
+  bottom:
+    0;
+
+  left:
+    10px;
+
+  width:
+    2px;
+
+  background:
+    #ece6f4;
+}
+
+
+.sales-hotel-visit__content {
+  padding:
+    0
+    0
+    22px
+    12px;
+}
+
+
+.sales-hotel-visit__top {
+  display:
+    flex;
+
+  align-items:
+    flex-start;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+}
+
+
+.sales-hotel-visit__top strong {
+  display:
+    block;
+
+  color:
+    #372947;
+
+  font-size:
+    13px;
+}
+
+
+.sales-hotel-visit__top span {
+  display:
+    block;
+
+  margin-top:
+    4px;
+
+  color:
+    #9b929f;
+
+  font-size:
+    10px;
+}
+
+
+.sales-hotel-route-tag {
+  display:
+    inline-flex !important;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  margin:
+    0 !important;
+
+  padding:
+    5px
+    8px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f4f0fa;
+
+  color:
+    #766887 !important;
+
+  white-space:
+    nowrap;
+}
+
+
+.sales-hotel-visit__notes {
+  margin-top:
+    10px;
+
+  padding:
+    10px
+    12px;
+
+  display:
+    flex;
+
+  gap:
+    8px;
+
+  border-radius:
+    12px;
+
+  background:
+    #faf8fc;
+
+  color:
+    #806d91;
+}
+
+
+.sales-hotel-visit__notes p {
+  margin:
+    0;
+
+  color:
+    #62556d;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.5;
+}
+
+
+.sales-hotel-visit__follow {
+  margin-top:
+    9px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    6px;
+
+  color:
+    #8151df;
+
+  font-size:
+    10px;
+}
+
+
+.sales-hotel-visit__follow span {
+  color:
+    #91879a;
+}
+
+
+.sales-hotel-visit__follow strong {
+  color:
+    #5a4c65;
+}
+
+
+/* EMPTY */
+
+.sales-hotel-history-empty {
+  min-height:
+    190px;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  color:
+    #93899c;
+}
+
+
+.sales-hotel-history-empty svg {
+  color:
+    #8556df;
+}
+
+
+.sales-hotel-history-empty strong {
+  margin-top:
+    10px;
+
+  color:
+    #473a53;
+
+  font-size:
+    13px;
+}
+
+
+.sales-hotel-history-empty p {
+  margin:
+    5px
+    0
+    0;
+
+  font-size:
+    11px;
+}
+
+
+/* MOBILE */
+
+@media (
+  max-width:
+  850px
+) {
+
+  .sales-hotel-detail-page {
+    padding:
+      22px
+      16px
+      calc(
+        95px +
+        env(
+          safe-area-inset-bottom
+        )
+      );
+  }
+
+
+  .sales-hotel-detail-header {
+    align-items:
+      flex-start;
+  }
+
+
+  .sales-hotel-detail-header h1 {
+    font-size:
+      26px;
+  }
+
+
+  .sales-hotel-detail-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .sales-hotel-info-list {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .sales-hotel-detail-header >
+  .sales-status-badge {
+    display:
+      none;
+  }
+
+}
+/* =========================================================
+   ALTA EXPRESS
+   ========================================================= */
+
+.sales-hotel-detail-success {
+  margin-bottom: 16px;
+
+  padding: 12px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: 1px solid #cce9d8;
+
+  border-radius: 12px;
+
+  background: #edf9f2;
+
+  color: #28734d;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* BOTÓN */
+
+.sales-start-onboarding-button {
+  width: 100%;
+
+  min-height: 42px;
+
+  margin-top: 16px;
+
+  padding: 0 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  background: #7040d5;
+
+  color: #ffffff;
+
+  font: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* CASO EXISTENTE */
+
+.sales-onboarding-case {
+  margin-bottom: 18px;
+
+  padding: 20px;
+
+  border: 1px solid #dfd4f5;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f3ff,
+      #ffffff
+    );
+}
+
+
+.sales-onboarding-case__header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #ebe4f5;
+}
+
+
+.sales-onboarding-case__header > div > span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7340d8;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+.sales-onboarding-case__header h2 {
+  margin: 0;
+
+  color: #2d184d;
+
+  font-size: 17px;
+}
+
+
+.sales-onboarding-case__status {
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+.sales-onboarding-case__status.is-started {
+  background: #eee7ff;
+
+  color: #6432ca;
+}
+
+
+.sales-onboarding-case__status.is-invited {
+  background: #e7f1ff;
+
+  color: #32699a;
+}
+
+
+.sales-onboarding-case__status.is-claimed {
+  background: #e3f7ec;
+
+  color: #24714a;
+}
+
+
+.sales-onboarding-case__status.is-cancelled {
+  background: #f6e8e9;
+
+  color: #9a4047;
+}
+
+
+/* CONTACTOS */
+
+.sales-onboarding-contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  gap: 9px;
+
+  margin-top: 16px;
+}
+
+
+.sales-onboarding-contact-grid > div {
+  min-width: 0;
+
+  padding: 11px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #7954c8;
+}
+
+
+.sales-onboarding-contact-grid span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #9a90a4;
+
+  font-size: 9px;
+}
+
+
+.sales-onboarding-contact-grid strong {
+  display: block;
+
+  color: #4d4057;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  overflow-wrap: anywhere;
+}
+
+
+.sales-onboarding-case__footer {
+  margin-top: 14px;
+
+  display: flex;
+
+  gap: 5px;
+
+  color: #94899d;
+
+  font-size: 10px;
+}
+
+
+.sales-onboarding-case__footer strong {
+  color: #5a4b65;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.sales-onboarding-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 4000;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+}
+
+
+.sales-onboarding-modal__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  border: 0;
+
+  background:
+    rgba(
+      29,
+      17,
+      49,
+      .52
+    );
+}
+
+
+.sales-onboarding-modal__card {
+  width: min(
+    100%,
+    510px
+  );
+
+  max-height: calc(
+    100dvh - 40px
+  );
+
+  position: relative;
+
+  z-index: 2;
+
+  overflow-y: auto;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px
+    rgba(
+      33,
+      18,
+      59,
+      .24
+    );
+}
+
+
+.sales-onboarding-modal__header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 18px;
+}
+
+
+.sales-onboarding-modal__header > div > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7040d5;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+}
+
+
+.sales-onboarding-modal__header h2 {
+  margin: 0;
+
+  color: #281443;
+
+  font-size: 21px;
+}
+
+
+.sales-onboarding-modal__header p {
+  max-width: 370px;
+
+  margin: 6px 0 0;
+
+  color: #867b8f;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+.sales-onboarding-modal__header > button {
+  width: 36px;
+
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid #e5dfeb;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #75697f;
+
+  cursor: pointer;
+}
+
+
+/* FORM */
+
+.sales-onboarding-modal form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 13px;
+}
+
+
+.sales-onboarding-modal label {
+  min-width: 0;
+}
+
+
+.sales-onboarding-modal label > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #62556e;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.sales-onboarding-modal input {
+  width: 100%;
+
+  height: 43px;
+
+  padding: 0 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd6e5;
+
+  border-radius: 11px;
+
+  outline: 0;
+
+  background: #fcfbfd;
+
+  color: #382a43;
+
+  font: inherit;
+
+  font-size: 12px;
+}
+
+
+.sales-onboarding-modal input:focus {
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      139,
+      92,
+      246,
+      .10
+    );
+}
+
+
+.sales-onboarding-modal__actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+
+  margin-top: 5px;
+}
+
+
+.sales-onboarding-modal__actions button {
+  min-height: 41px;
+
+  padding: 0 14px;
+
+  border-radius: 11px;
+
+  font: inherit;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.sales-onboarding-modal__actions button.is-secondary {
+  border: 1px solid #ddd6e5;
+
+  background: #ffffff;
+
+  color: #64576e;
+}
+
+
+.sales-onboarding-modal__actions button.is-primary {
+  border: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  background: #7040d5;
+
+  color: #ffffff;
+}
+
+
+.sales-onboarding-modal__actions button:disabled {
+  opacity: .55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (
+  max-width: 850px
+) {
+
+  .sales-onboarding-contact-grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+@media (
+  max-width: 600px
+) {
+
+  .sales-onboarding-contact-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .sales-onboarding-modal {
+    padding: 12px;
+  }
+
+
+  .sales-onboarding-modal__card {
+    padding: 18px;
+  }
+
+
+  .sales-onboarding-modal form {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .sales-onboarding-modal__actions {
+    grid-column: 1;
+
+    flex-direction: column-reverse;
+  }
+
+
+  .sales-onboarding-modal__actions button {
+    width: 100%;
+  }
+
+}

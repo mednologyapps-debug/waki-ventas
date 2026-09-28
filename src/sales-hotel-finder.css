@@ -1,0 +1,426 @@
+/* =========================================================
+   WAKI VENTAS — BUSCADOR Y ALTA MANUAL DE HOTEL
+   ========================================================= */
+
+.sales-hotel-finder {
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid var(--waki-border);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.sales-hotel-finder__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  color: #938a9d;
+}
+
+.sales-hotel-finder__heading h3 {
+  margin: 0;
+  color: var(--waki-text);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.3px;
+}
+
+.sales-hotel-finder__heading p {
+  max-width: 580px;
+  margin: 5px 0 0;
+  color: var(--waki-text-soft);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.sales-hotel-finder__search {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.sales-hotel-finder__input {
+  min-height: 48px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e3dde9;
+  border-radius: 11px;
+  background: #fcfbfe;
+}
+
+.sales-hotel-finder__input > svg {
+  flex: 0 0 auto;
+  color: #9690a0;
+}
+
+.sales-hotel-finder__input input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--waki-text);
+  font-size: 13px;
+}
+
+.sales-hotel-finder__clear {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #9b93a3;
+}
+
+.sales-hotel-finder__search-button {
+  min-width: 93px;
+  min-height: 48px;
+  padding: 0 15px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--waki-purple);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sales-hotel-finder__search-button:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+.sales-hotel-results {
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid #eee9f2;
+  border-radius: 12px;
+}
+
+.sales-hotel-result {
+  min-height: 62px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid #f0edf3;
+}
+
+.sales-hotel-result:last-child {
+  border-bottom: 0;
+}
+
+.sales-hotel-result__pin {
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--waki-purple-soft);
+  color: var(--waki-purple-dark);
+}
+
+.sales-hotel-result__copy {
+  min-width: 0;
+}
+
+.sales-hotel-result__copy strong,
+.sales-hotel-result__copy span,
+.sales-hotel-result__copy small {
+  display: block;
+}
+
+.sales-hotel-result__copy strong {
+  color: #2e2837;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sales-hotel-result__copy span {
+  margin-top: 3px;
+  color: #8c8494;
+  font-size: 9px;
+}
+
+.sales-hotel-result__copy small {
+  margin-top: 4px;
+  color: var(--waki-purple);
+  font-size: 8px;
+}
+
+.sales-hotel-empty {
+  margin-top: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px dashed #d5c8eb;
+  border-radius: 12px;
+  background: #faf8ff;
+}
+
+.sales-hotel-empty strong,
+.sales-hotel-empty span {
+  display: block;
+}
+
+.sales-hotel-empty strong {
+  color: #352d40;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.sales-hotel-empty span {
+  max-width: 510px;
+  margin-top: 4px;
+  color: #887f92;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.sales-hotel-empty button {
+  min-height: 40px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border: 1px solid #ccb9ef;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--waki-purple-dark);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.sales-manual-hotel-panel {
+  margin-top: 14px;
+  padding: 15px;
+  border: 1px solid #d9cdf0;
+  border-radius: 13px;
+  background: #fbf9ff;
+}
+
+.sales-manual-hotel-panel__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sales-manual-hotel-panel__top h4 {
+  margin: 0;
+  color: #30283b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sales-manual-hotel-panel__top p {
+  margin: 4px 0 0;
+  color: #8c8494;
+  font-size: 9px;
+}
+
+.sales-manual-hotel-panel__close {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 9px;
+  background: #f1ecf7;
+  color: #83798e;
+}
+
+.sales-manual-hotel-form {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.sales-manual-hotel-form label > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #4b4355;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.sales-manual-hotel-form input {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 12px;
+  border: 1px solid #e1dbe7;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: var(--waki-text);
+  font-size: 12px;
+}
+
+.sales-manual-hotel-form input:focus {
+  border-color: #a583ea;
+  box-shadow: 0 0 0 3px rgba(113,55,232,.07);
+}
+
+.sales-manual-location {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #ded6e7;
+  border-radius: 11px;
+  background: #fff;
+}
+
+.sales-manual-location__status {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--waki-purple-dark);
+}
+
+.sales-manual-location__status > svg {
+  flex: 0 0 auto;
+}
+
+.sales-manual-location__status strong,
+.sales-manual-location__status span {
+  display: block;
+}
+
+.sales-manual-location__status strong {
+  color: #3d3449;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sales-manual-location__status span {
+  margin-top: 3px;
+  color: #8f8798;
+  font-size: 8px;
+}
+
+.sales-manual-location > button {
+  min-height: 37px;
+  padding: 0 10px;
+  flex: 0 0 auto;
+  border: 1px solid #d2c3ec;
+  border-radius: 9px;
+  background: #faf8ff;
+  color: var(--waki-purple-dark);
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.sales-manual-location__confirm {
+  padding: 9px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 9px;
+  background: #f0fbf6;
+  color: #2c815b;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.sales-hotel-finder__error,
+.sales-hotel-finder__success {
+  padding: 10px 11px;
+  border-radius: 9px;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.sales-hotel-finder__error {
+  margin-top: 10px;
+  border: 1px solid #edd8dd;
+  background: #fff7f8;
+  color: #9a4d58;
+}
+
+.sales-hotel-finder__success {
+  border: 1px solid #caeadb;
+  background: #f2fbf6;
+  color: #39775b;
+}
+
+.sales-manual-save {
+  min-height: 47px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--waki-purple);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sales-manual-save:disabled {
+  opacity: .5;
+  cursor: default;
+}
+
+@media (max-width: 800px) {
+  .sales-hotel-finder {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .sales-hotel-finder__heading h3 {
+    font-size: 17px;
+  }
+
+  .sales-hotel-finder__search {
+    grid-template-columns: minmax(0, 1fr) 84px;
+  }
+
+  .sales-hotel-finder__input input {
+    font-size: 16px;
+  }
+
+  .sales-hotel-finder__search-button {
+    min-width: 0;
+    padding: 0 10px;
+  }
+
+  .sales-hotel-empty {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sales-hotel-empty button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .sales-manual-location {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sales-manual-location > button {
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .sales-manual-hotel-form input {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .sales-manual-save {
+    min-height: 50px;
+  }
+}

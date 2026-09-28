@@ -1,0 +1,149 @@
+/* =========================================================
+   WAKI VENTAS — GOOGLE MAPS / BLOQUE 1
+   Solo visualización de mapa. Sin Places ni Routes.
+   ========================================================= */
+
+.sales-map-card {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid var(--waki-border);
+  border-radius: 17px;
+  background: #fff;
+}
+
+.sales-map-card__header {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sales-map-card__header h3 {
+  margin: 0;
+  color: var(--waki-text);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -.35px;
+}
+
+.sales-map-card__header p {
+  margin: 4px 0 0;
+  color: var(--waki-text-soft);
+  font-size: 9px;
+}
+
+.sales-map-location-button {
+  min-height: 39px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border: 1px solid #d7caf0;
+  border-radius: 10px;
+  background: #faf8ff;
+  color: var(--waki-purple-dark);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sales-map-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(310px, 43vw, 470px);
+  overflow: hidden;
+  border: 1px solid #e8e2ee;
+  border-radius: 14px;
+  background: #f3f0f7;
+}
+
+.sales-map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.sales-map-state {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: rgba(250, 249, 252, .93);
+  color: #756c80;
+  font-size: 11px;
+}
+
+.sales-map-state--error {
+  padding: 24px;
+  flex-direction: column;
+  text-align: center;
+  color: #9b4b58;
+}
+
+.sales-map-loader {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e9e1f6;
+  border-top-color: var(--waki-purple);
+  border-radius: 50%;
+  animation: salesMapSpin .75s linear infinite;
+}
+
+@keyframes salesMapSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sales-map-note {
+  margin: 10px 2px 0;
+  color: #9a919f;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+@media (max-width: 800px) {
+  .sales-map-card {
+    padding: 13px;
+    border-radius: 14px;
+  }
+
+  .sales-map-card__header {
+    align-items: flex-start;
+  }
+
+  .sales-map-card__header h3 {
+    font-size: 17px;
+  }
+
+  .sales-map-location-button {
+    min-height: 40px;
+    padding: 0 10px;
+  }
+
+  .sales-map-location-button span {
+    display: none;
+  }
+
+  .sales-map-frame {
+    height: 46vh;
+    min-height: 320px;
+    max-height: 520px;
+    border-radius: 12px;
+  }
+
+  .sales-map-note {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  .sales-map-frame {
+    height: 360px;
+    min-height: 360px;
+  }
+}

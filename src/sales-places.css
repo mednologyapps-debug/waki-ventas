@@ -1,0 +1,114 @@
+/* =========================================================
+   WAKI VENTAS — DISCOVERY PLACES
+   ========================================================= */
+
+.sales-discovery-row {
+  margin-bottom: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid var(--waki-border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.sales-discovery-row strong,
+.sales-discovery-row span {
+  display: block;
+}
+
+.sales-discovery-row strong {
+  color: var(--waki-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sales-discovery-row span {
+  margin-top: 4px;
+  color: var(--waki-text-soft);
+  font-size: 9px;
+}
+
+.sales-discover-button {
+  min-height: 42px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  border: 1px solid #d3c3ef;
+  border-radius: 10px;
+  background: var(--waki-purple-soft);
+  color: var(--waki-purple-dark);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sales-discover-button:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.sales-discover-button .is-spinning {
+  animation: salesDiscoverySpin .8s linear infinite;
+}
+
+@keyframes salesDiscoverySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sales-cache-status {
+  margin: -2px 2px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: #7b7285;
+}
+
+.sales-cache-status span {
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.sales-cache-status small {
+  font-size: 8px;
+  color: #a098a8;
+}
+
+.sales-primary-action:disabled {
+  opacity: .55;
+  cursor: default;
+  box-shadow: none;
+}
+
+@media (max-width: 800px) {
+  .sales-discovery-row {
+    padding: 13px;
+  }
+
+  .sales-discovery-row span {
+    max-width: 220px;
+  }
+
+  .sales-discover-button {
+    min-height: 44px;
+    padding: 0 11px;
+  }
+}
+
+@media (max-width: 390px) {
+  .sales-discovery-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sales-discover-button {
+    width: 100%;
+  }
+}
