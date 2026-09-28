@@ -1,71 +1,90 @@
+/* =========================================================
+   WAKI VENTAS — HOTELES
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
 .sales-hotels-page {
-  min-width: 0;
+  min-height: 100vh;
+
   width: 100%;
-  padding: 34px 38px 60px;
+  min-width: 0;
+
+  padding:
+    40px
+    44px
+    80px;
+
   box-sizing: border-box;
+
+  background: #f8f7fb;
 }
 
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .sales-hotels-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 24px;
+  width: 100%;
+
   margin-bottom: 24px;
-}
-
-
-.sales-hotels-header h1 {
-  margin: 4px 0 6px;
-  font-size: clamp(
-    28px,
-    4vw,
-    38px
-  );
-  line-height: 1.05;
-  color: #24104f;
-}
-
-
-.sales-hotels-header p {
-  max-width: 590px;
-  margin: 0;
-  color: #746d83;
-  font-size: 15px;
-  line-height: 1.55;
 }
 
 
 .sales-hotels-eyebrow {
   display: block;
-  color: #7042d8;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.09em;
+
+  margin-bottom: 6px;
+
+  color: #7040d5;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
   text-transform: uppercase;
 }
 
 
-.sales-hotels-header__icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
+.sales-hotels-header h1 {
+  margin: 0;
 
-  display: grid;
-  place-items: center;
+  color: #24133d;
 
-  color: #6d3bd1;
-  background: #f0eafd;
+  font-size: 30px;
+  line-height: 1.15;
 
-  flex: 0 0 auto;
+  font-weight: 700;
 }
 
 
-/* =========================
+.sales-hotels-header p {
+  max-width: 650px;
+
+  margin:
+    8px
+    0
+    0;
+
+  color: #756b80;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
    RESUMEN
-========================= */
+   ========================================================= */
 
 .sales-hotels-stats {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -76,79 +95,65 @@
 
   gap: 12px;
 
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 
 .sales-hotels-stats > div {
-  background: #ffffff;
+  min-width: 0;
+
+  padding: 18px;
+
+  box-sizing: border-box;
 
   border:
     1px solid
-    #ece8f1;
+    #ebe6f1;
 
-  border-radius: 18px;
+  border-radius: 17px;
 
-  padding: 17px 18px;
+  background: #ffffff;
+}
 
-  box-shadow:
-    0 7px 20px
-    rgba(
-      43,
-      22,
-      78,
-      0.04
-    );
+
+.sales-hotels-stats strong {
+  display: block;
+
+  color: #2f1c4a;
+
+  font-size: 25px;
+  line-height: 1;
+
+  font-weight: 700;
 }
 
 
 .sales-hotels-stats span {
   display: block;
 
-  color: #857d90;
+  margin-top: 8px;
+
+  color: #857a90;
 
   font-size: 12px;
-
-  margin-bottom: 7px;
+  line-height: 1.35;
 }
 
 
-.sales-hotels-stats strong {
-  color: #24104f;
-
-  font-size: 24px;
-
-  line-height: 1;
-}
-
-
-/* =========================
-   BUSCADOR / FILTROS
-========================= */
-
-.sales-hotels-controls {
-  background: #ffffff;
-
-  border:
-    1px solid
-    #ece8f1;
-
-  border-radius: 20px;
-
-  padding: 16px;
-
-  margin-bottom: 19px;
-}
-
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
 
 .sales-hotels-search {
-  min-height: 46px;
+  width: 100%;
 
-  border-radius: 14px;
+  min-height: 49px;
 
-  border:
-    1px solid
-    #ddd7e7;
+  margin-bottom: 14px;
+
+  padding:
+    0
+    15px;
 
   display: flex;
 
@@ -156,26 +161,39 @@
 
   gap: 10px;
 
-  padding:
-    0 14px;
+  box-sizing: border-box;
 
-  color: #83798f;
+  border:
+    1px solid
+    #e4dfea;
 
-  background: #fbfafc;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #8a7e94;
 }
 
 
 .sales-hotels-search:focus-within {
-  border-color: #8b5cf6;
+  border-color: #9b7ce6;
 
   box-shadow:
-    0 0 0 3px
+    0
+    0
+    0
+    3px
     rgba(
-      139,
-      92,
-      246,
-      0.11
+      112,
+      64,
+      213,
+      0.07
     );
+}
+
+
+.sales-hotels-search svg {
+  flex: 0 0 auto;
 }
 
 
@@ -183,6 +201,7 @@
   width: 100%;
 
   min-width: 0;
+  height: 49px;
 
   border: 0;
 
@@ -190,119 +209,107 @@
 
   background: transparent;
 
+  color: #34273f;
+
   font: inherit;
 
-  color: #281a3c;
+  font-size: 14px;
 }
 
 
-.sales-hotels-filter-title {
-  display: flex;
-
-  align-items: center;
-
-  gap: 7px;
-
-  margin:
-    15px 0 10px;
-
-  color: #786f84;
-
-  font-size: 12px;
-
-  font-weight: 700;
+.sales-hotels-search input::placeholder {
+  color: #aaa1b2;
 }
 
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
 
 .sales-hotels-filters {
+  width: 100%;
+
+  margin-bottom: 18px;
+
   display: flex;
 
-  flex-wrap: wrap;
-
   gap: 8px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.sales-hotels-filters::-webkit-scrollbar {
+  display: none;
 }
 
 
 .sales-hotels-filters button {
-  border:
-    1px solid
-    #e4deeb;
+  flex:
+    0
+    0
+    auto;
 
-  background: #ffffff;
-
-  color: #665d72;
+  min-height: 36px;
 
   padding:
-    8px 12px;
+    8px
+    14px;
+
+  border:
+    1px solid
+    #e1dbe8;
 
   border-radius: 999px;
 
-  cursor: pointer;
+  background: #ffffff;
+
+  color: #6d6278;
 
   font: inherit;
 
   font-size: 12px;
+  font-weight: 600;
 
-  font-weight: 700;
+  white-space: nowrap;
+
+  cursor: pointer;
 
   transition:
     background 0.15s ease,
-    color 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 
 .sales-hotels-filters button:hover {
-  border-color: #bda8eb;
+  border-color: #c6b2ef;
 }
 
 
 .sales-hotels-filters button.is-active {
-  border-color: #6d3bd1;
+  border-color: #7040d5;
 
-  background: #6d3bd1;
+  background: #7040d5;
 
   color: #ffffff;
 }
 
 
-/* =========================
-   HEADER LISTA
-========================= */
-
-.sales-hotels-list-heading {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 18px;
-
-  margin:
-    0 2px 12px;
-}
-
-
-.sales-hotels-list-heading strong {
-  color: #291745;
-
-  font-size: 15px;
-}
-
-
-.sales-hotels-list-heading span {
-  color: #948a9d;
-
-  font-size: 12px;
-}
-
-
-/* =========================
-   LISTA HOTELES
-========================= */
+/* =========================================================
+   LISTADO
+   ========================================================= */
 
 .sales-hotels-list {
+  width: 100%;
+
+  min-width: 0;
+
   display: grid;
 
   grid-template-columns:
@@ -311,240 +318,269 @@
       minmax(0, 1fr)
     );
 
-  gap: 14px;
+  gap: 12px;
 }
 
 
-.sales-hotel-card {
+/* =========================================================
+   TARJETA HOTEL
+   ========================================================= */
 
-    text-align: left;
-font: inherit;
-cursor: pointer;
+.sales-hotel-card {
   width: 100%;
 
-  border:
-    1px solid
-    #ebe6f0;
-
-  border-radius: 20px;
-
-  background: #ffffff;
+  min-width: 0;
 
   padding: 18px;
 
-  color: inherit;
-
   box-sizing: border-box;
 
-  box-shadow:
-    0 9px 25px
-    rgba(
-      45,
-      23,
-      79,
-      0.045
-    );
+  border:
+    1px solid
+    #e8e3ed;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: inherit;
+
+  text-align: left;
+
+  font: inherit;
+
+  cursor: pointer;
 
   transition:
+    border-color 0.16s ease,
     transform 0.16s ease,
-    box-shadow 0.16s ease,
-    border-color 0.16s ease;
+    box-shadow 0.16s ease;
 }
 
 
 .sales-hotel-card:hover {
-  transform:
-    translateY(-2px);
+  border-color: #cfc0ee;
 
-  border-color: #d8c8f7;
+  transform:
+    translateY(-1px);
 
   box-shadow:
-    0 14px 30px
+    0
+    10px
+    28px
     rgba(
-      45,
-      23,
-      79,
-      0.08
+      48,
+      27,
+      76,
+      0.055
     );
 }
 
 
+/* =========================================================
+   CABECERA TARJETA
+   ========================================================= */
+
 .sales-hotel-card__top {
+  width: 100%;
+
+  min-width: 0;
+
   display: flex;
 
   align-items: flex-start;
 
-  justify-content: space-between;
-
-  gap: 14px;
+  gap: 12px;
 }
 
 
-.sales-hotel-card__identity {
-  display: flex;
+.sales-hotel-card__icon {
+  width: 40px;
+  height: 40px;
 
-  gap: 11px;
+  flex:
+    0
+    0
+    40px;
 
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 12px;
+
+  background: #f2ecff;
+
+  color: #7040d5;
+}
+
+
+.sales-hotel-card__copy {
   min-width: 0;
 
   flex: 1;
 }
 
 
-.sales-hotel-card__identity > div:last-child {
+.sales-hotel-card__title-row {
   min-width: 0;
-}
 
-
-.sales-hotel-card__avatar {
-  width: 40px;
-
-  height: 40px;
-
-  display: grid;
-
-  place-items: center;
-
-  flex: 0 0 auto;
-
-  border-radius: 13px;
-
-  background: #f0eafd;
-
-  color: #6d3bd1;
-}
-
-
-.sales-hotel-card h2 {
-  margin:
-    1px 0 5px;
-
-  color: #271842;
-
-  font-size: 15px;
-
-  line-height: 1.3;
-
-  word-break: break-word;
-}
-
-
-.sales-hotel-card__identity p {
   display: flex;
 
-  align-items: center;
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+
+.sales-hotel-card__title-row > strong {
+  min-width: 0;
+
+  color: #30213d;
+
+  font-size: 15px;
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+.sales-hotel-card__top > svg {
+  flex: 0 0 auto;
+
+  color: #5f5569;
+}
+
+
+/* =========================================================
+   DIRECCIÓN
+   ========================================================= */
+
+.sales-hotel-card__address {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-top: 7px;
+
+  display: flex;
+
+  align-items: flex-start;
 
   gap: 5px;
 
-  margin: 0;
-
-  color: #8b8294;
+  color: #81768b;
 
   font-size: 12px;
+  line-height: 1.45;
 }
 
 
-/* =========================
-   ESTADOS
-========================= */
-
-.sales-status-badge {
+.sales-hotel-card__address svg {
   flex: 0 0 auto;
 
-  display: inline-flex;
+  margin-top: 1px;
+}
 
-  align-items: center;
 
-  min-height: 26px;
+.sales-hotel-card__address span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.sales-hotel-status {
+  flex: 0 0 auto;
 
   padding:
-    0 9px;
+    5px
+    8px;
 
   border-radius: 999px;
 
-  font-size: 10px;
+  background: #f2f0f4;
 
-  font-weight: 800;
+  color: #62596b;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.2;
 
   white-space: nowrap;
 }
 
 
-.sales-status-badge.is-neutral {
-  background: #f2f0f4;
+.sales-hotel-status--assigned {
+  background: #edf3ff;
 
-  color: #746c7c;
+  color: #375e9e;
 }
 
 
-.sales-status-badge.is-route {
-  background: #eee8ff;
+.sales-hotel-status--visited {
+  background: #f1eff7;
 
-  color: #6335c8;
+  color: #5d5270;
 }
 
 
-.sales-status-badge.is-visited {
-  background: #eaf4ff;
+.sales-hotel-status--follow_up {
+  background: #fff3db;
 
-  color: #2e6593;
+  color: #875900;
 }
 
 
-.sales-status-badge.is-follow {
-  background: #fff1d8;
+.sales-hotel-status--interested {
+  background: #e7f6ec;
 
-  color: #a86606;
+  color: #25623a;
 }
 
 
-.sales-status-badge.is-interested {
-  background: #e5f7ee;
+.sales-hotel-status--not_interested {
+  background: #f7e8e8;
 
-  color: #23714b;
+  color: #8b3838;
 }
 
 
-.sales-status-badge.is-onboarding {
-  background: #efe8ff;
+.sales-hotel-status--onboarding_started,
+.sales-hotel-status--pending_review {
+  background: #efeaff;
 
-  color: #6639c8;
+  color: #5a3da5;
 }
 
 
-.sales-status-badge.is-approved {
-  background: #e4f7e7;
+.sales-hotel-status--approved {
+  background: #e8f7ef;
 
-  color: #24713b;
+  color: #236947;
 }
 
 
-.sales-status-badge.is-rejected {
-  background: #f8e9ea;
-
-  color: #9d4147;
-}
-
-
-/* =========================
-   INFORMACIÓN
-========================= */
-
-.sales-hotel-card__address {
-  margin:
-    14px 0;
-
-  color: #6f6679;
-
-  font-size: 12px;
-
-  line-height: 1.55;
-
-  min-height: 38px;
-}
-
+/* =========================================================
+   ÚLTIMA VISITA / VISITAS
+   ========================================================= */
 
 .sales-hotel-card__meta {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-top: 16px;
+
   display: grid;
 
   grid-template-columns:
@@ -553,160 +589,184 @@ cursor: pointer;
       minmax(0, 1fr)
     );
 
-  gap: 8px;
+  gap: 10px;
 }
 
 
 .sales-hotel-card__meta > div {
   min-width: 0;
 
-  padding:
-    10px 11px;
-
-  border-radius: 13px;
-
-  background: #faf8fc;
-
-  display: grid;
-
-  grid-template-columns:
-    auto 1fr;
-
-  gap:
-    3px 7px;
-
-  color: #786d83;
-}
-
-
-.sales-hotel-card__meta svg {
-  grid-row:
-    span 2;
-
-  margin-top: 2px;
-
-  color: #8b5cf6;
-}
-
-
-.sales-hotel-card__meta span {
-  font-size: 10px;
-
-  color: #9990a2;
-}
-
-
-.sales-hotel-card__meta strong {
-  min-width: 0;
-
-  font-size: 11px;
-
-  line-height: 1.35;
-
-  color: #514759;
-
-  overflow: hidden;
-
-  text-overflow: ellipsis;
-}
-
-
-/* =========================
-   NOTA
-========================= */
-
-.sales-hotel-card__note {
-  margin-top: 9px;
+  min-height: 46px;
 
   padding:
-    10px 12px;
+    10px
+    11px;
 
-  border-radius: 13px;
-
-  background: #f6f2fd;
-}
-
-
-.sales-hotel-card__note span {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: #8b5cf6;
-
-  font-size: 10px;
-
-  font-weight: 800;
-}
-
-
-.sales-hotel-card__note p {
-  margin: 0;
-
-  color: #5f566a;
-
-  font-size: 11px;
-
-  line-height: 1.45;
-
-  display: -webkit-box;
-
-  -webkit-line-clamp: 2;
-
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-}
-
-
-/* =========================
-   FOOTER HOTEL
-========================= */
-
-.sales-hotel-card__footer {
   display: flex;
 
   align-items: center;
 
-  justify-content: space-between;
+  justify-content: center;
 
-  gap: 12px;
+  gap: 8px;
 
-  padding-top: 14px;
+  box-sizing: border-box;
 
-  margin-top: 14px;
+  border-radius: 12px;
+
+  background: #faf9fc;
+
+  text-align: center;
+}
+
+
+.sales-hotel-card__meta span {
+  display: inline;
+
+  margin: 0;
+
+  color: #91869b;
+
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+
+.sales-hotel-card__meta strong {
+  display: inline;
+
+  margin: 0;
+
+  color: #493d53;
+
+  font-size: 12px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SEGUIMIENTO
+   ========================================================= */
+
+.sales-hotel-follow-up,
+.sales-hotel-converted {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-top: 12px;
+
+  padding:
+    9px
+    11px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 11px;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+
+.sales-hotel-follow-up {
+  background: #f4f1f8;
+
+  color: #675d71;
+}
+
+
+.sales-hotel-follow-up.is-overdue {
+  background: #fff3db;
+
+  color: #875900;
+}
+
+
+.sales-hotel-converted {
+  background: #eaf8ef;
+
+  color: #286741;
+}
+
+
+.sales-hotel-follow-up svg,
+.sales-hotel-converted svg {
+  flex: 0 0 auto;
+}
+
+
+.sales-hotel-follow-up span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ÚLTIMA NOTA
+   ========================================================= */
+
+.sales-hotel-last-note {
+  width: 100%;
+
+  min-width: 0;
+
+  margin-top: 12px;
+
+  padding-top: 12px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  box-sizing: border-box;
 
   border-top:
     1px solid
-    #f0edf3;
+    #f0edf2;
 
-  font-size: 11px;
+  color: #746a7d;
 
-  color: #8f8598;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 
-.sales-hotel-card__assigned {
-  color: #6d3bd1;
+.sales-hotel-last-note svg {
+  flex: 0 0 auto;
 
-  font-weight: 800;
+  margin-top: 2px;
 }
 
 
-/* =========================
-   VACÍO
-========================= */
+.sales-hotel-last-note span {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   ESTADO VACÍO
+   ========================================================= */
 
 .sales-hotels-empty {
-  min-height: 290px;
+  min-height: 250px;
 
-  border:
-    1px dashed
-    #d9d0e5;
-
-  background: #ffffff;
-
-  border-radius: 20px;
+  padding: 30px;
 
   display: flex;
 
@@ -716,118 +776,59 @@ cursor: pointer;
 
   justify-content: center;
 
+  gap: 8px;
+
+  box-sizing: border-box;
+
+  border:
+    1px dashed
+    #dcd4e4;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: #7040d5;
+
   text-align: center;
-
-  padding: 32px;
-
-  color: #766d80;
 }
 
 
-.sales-hotels-empty svg {
-  color: #8b5cf6;
+.sales-hotels-empty strong {
+  color: #382844;
 }
 
 
-.sales-hotels-empty h2 {
-  margin:
-    14px 0 6px;
+.sales-hotels-empty span {
+  max-width: 340px;
 
-  color: #2b1948;
+  color: #81768b;
 
-  font-size: 19px;
-}
-
-
-.sales-hotels-empty p {
-  max-width: 350px;
-
-  margin:
-    0 0 17px;
-
-  font-size: 13px;
-
+  font-size: 12px;
   line-height: 1.5;
 }
 
 
-.sales-hotels-empty button {
-  border: 0;
-
-  border-radius: 12px;
-
-  background: #6d3bd1;
-
-  color: #ffffff;
-
-  min-height: 42px;
-
-  padding:
-    0 16px;
-
-  font: inherit;
-
-  font-weight: 800;
-
-  cursor: pointer;
-}
-
-
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+   ========================================================= */
 
-@media (
-  max-width: 980px
-) {
-  .sales-hotels-page {
-    padding:
-      28px 24px 90px;
-  }
-
+@media (max-width: 1100px) {
 
   .sales-hotels-list {
-    grid-template-columns:
-      1fr;
+    grid-template-columns: 1fr;
   }
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+@media (max-width: 900px) {
 
-@media (
-  max-width: 720px
-) {
   .sales-hotels-page {
-    width: 100%;
-
-    max-width: 100%;
-
-    overflow-x: hidden;
-
     padding:
-      20px 16px 96px;
-  }
-
-
-  .sales-hotels-header {
-    align-items: center;
-  }
-
-
-  .sales-hotels-header p {
-    font-size: 13px;
-  }
-
-
-  .sales-hotels-header__icon {
-    width: 42px;
-
-    height: 42px;
-
-    border-radius: 14px;
+      26px
+      20px
+      100px;
   }
 
 
@@ -837,13 +838,126 @@ cursor: pointer;
         2,
         minmax(0, 1fr)
       );
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    overflow-x: hidden !important;
+  }
+
+
+  .sales-portal {
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
+
+    overflow-x: hidden !important;
+  }
+
+
+  /* =========================
+     CONTENIDO
+     ========================= */
+
+  .sales-hotels-page {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin-left: 0 !important;
+
+    padding:
+      20px
+      14px
+      calc(
+        112px +
+        env(
+          safe-area-inset-bottom
+        )
+      ) !important;
+
+    box-sizing: border-box !important;
+
+    overflow-x: hidden !important;
+  }
+
+
+  /* =========================
+     HEADER
+     ========================= */
+
+  .sales-hotels-header {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-bottom: 18px;
+  }
+
+
+  .sales-hotels-header h1 {
+    font-size: 28px;
+
+    line-height: 1.08;
+  }
+
+
+  .sales-hotels-header p {
+    width: 100%;
+
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+  }
+
+
+  /* =========================
+     MÉTRICAS
+     ========================= */
+
+  .sales-hotels-stats {
+    width: 100%;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      ) !important;
 
     gap: 9px;
+
+    margin-bottom: 16px;
   }
 
 
   .sales-hotels-stats > div {
-    padding: 14px;
+    min-width: 0;
+
+    padding:
+      14px
+      13px;
 
     border-radius: 15px;
   }
@@ -854,25 +968,90 @@ cursor: pointer;
   }
 
 
-  .sales-hotels-controls {
-    padding: 13px;
+  .sales-hotels-stats span {
+    margin-top: 7px;
 
-    border-radius: 17px;
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
   }
 
 
-  .sales-hotels-filters {
-    flex-wrap: nowrap;
+  /* =========================
+     BUSCADOR
+     ========================= */
 
+  .sales-hotels-search {
     width: 100%;
 
     max-width: 100%;
 
-    overflow-x: auto;
+    min-height: 48px;
 
-    padding-bottom: 3px;
+    margin-bottom: 12px;
+
+    padding:
+      0
+      13px;
+  }
+
+
+  .sales-hotels-search input {
+    width: 100%;
+
+    min-width: 0;
+
+    height: 48px;
+
+    font-size: 14px;
+  }
+
+
+  .sales-hotels-search input::placeholder {
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     FILTROS
+     ========================= */
+
+  .sales-hotels-filters {
+    width:
+      calc(
+        100% +
+        28px
+      );
+
+    max-width: none;
+
+    margin:
+      0
+      -14px
+      18px;
+
+    padding:
+      0
+      14px
+      4px;
+
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    gap: 8px;
+
+    box-sizing: border-box;
+
+    overflow-x: auto !important;
+
+    overflow-y: hidden;
 
     scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
   }
 
 
@@ -883,438 +1062,567 @@ cursor: pointer;
 
   .sales-hotels-filters button {
     flex:
-      0 0 auto;
+      0
+      0
+      auto;
+
+    min-height: 38px;
+
+    padding:
+      8px
+      13px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
   }
 
 
+  /* =========================
+     LISTA
+     ========================= */
+
+  .sales-hotels-list {
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+      1fr !important;
+
+    gap: 12px;
+  }
+
+
+  /* =========================
+     TARJETA
+     ========================= */
+
   .sales-hotel-card {
-    border-radius: 17px;
+    width: 100%;
+
+    max-width: 100%;
+
+    min-width: 0;
 
     padding: 15px;
+
+    border-radius: 17px;
+
+    overflow: hidden;
   }
 
 
   .sales-hotel-card__top {
-    gap: 9px;
+    width: 100%;
+
+    min-width: 0;
+
+    gap: 10px;
   }
 
 
-  .sales-hotel-card__meta {
-    grid-template-columns:
-      1fr;
+  .sales-hotel-card__icon {
+    width: 38px;
+
+    height: 38px;
+
+    flex:
+      0
+      0
+      38px;
   }
 
 
-  .sales-hotel-card__address {
-    min-height: 0;
+  .sales-hotel-card__copy {
+    width: 100%;
+
+    min-width: 0;
   }
 
-
-  .sales-hotel-card__footer {
-    align-items: flex-start;
-  }
-}
-
-.sales-hotels-page {
-  min-height: 100vh;
-  width: 100%;
-  padding: 40px 44px 80px;
-  box-sizing: border-box;
-  background: #f8f7fb;
-}
-
-.sales-hotels-header {
-  margin-bottom: 24px;
-}
-
-.sales-hotels-eyebrow {
-  display: block;
-  margin-bottom: 6px;
-  color: #7040d5;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.sales-hotels-header h1 {
-  margin: 0;
-  color: #24133d;
-  font-size: 30px;
-  line-height: 1.15;
-}
-
-.sales-hotels-header p {
-  max-width: 650px;
-  margin: 8px 0 0;
-  color: #756b80;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.sales-hotels-stats {
-  display: grid;
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.sales-hotels-stats > div {
-  padding: 18px;
-  border: 1px solid #ebe6f1;
-  border-radius: 17px;
-  background: #fff;
-}
-
-.sales-hotels-stats strong {
-  display: block;
-  color: #2f1c4a;
-  font-size: 25px;
-  line-height: 1;
-}
-
-.sales-hotels-stats span {
-  display: block;
-  margin-top: 8px;
-  color: #857a90;
-  font-size: 12px;
-}
-
-.sales-hotels-search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-bottom: 14px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  border: 1px solid #e4dfea;
-  border-radius: 14px;
-  background: #fff;
-  color: #8a7e94;
-}
-
-.sales-hotels-search:focus-within {
-  border-color: #9b7ce6;
-  box-shadow:
-    0 0 0 3px
-    rgba(112, 64, 213, .07);
-}
-
-.sales-hotels-search input {
-  width: 100%;
-  min-width: 0;
-  height: 49px;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: #34273f;
-  font: inherit;
-  font-size: 14px;
-}
-
-.sales-hotels-filters {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 18px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.sales-hotels-filters::-webkit-scrollbar {
-  display: none;
-}
-
-.sales-hotels-filters button {
-  flex: 0 0 auto;
-  padding: 9px 14px;
-  border: 1px solid #e1dbe8;
-  border-radius: 999px;
-  background: #fff;
-  color: #6d6278;
-  font: inherit;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.sales-hotels-filters button.is-active {
-  border-color: #7040d5;
-  background: #7040d5;
-  color: #fff;
-}
-
-.sales-hotels-list {
-  display: grid;
-  gap: 12px;
-}
-
-.sales-hotel-card {
-  width: 100%;
-  padding: 18px;
-  border: 1px solid #e8e3ed;
-  border-radius: 18px;
-  background: #fff;
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition:
-    border-color .16s ease,
-    transform .16s ease,
-    box-shadow .16s ease;
-}
-
-.sales-hotel-card:hover {
-  border-color: #cfc0ee;
-  transform: translateY(-1px);
-  box-shadow:
-    0 10px 28px
-    rgba(48, 27, 76, .055);
-}
-
-.sales-hotel-card__top {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.sales-hotel-card__icon {
-  display: grid;
-  place-items: center;
-  flex: 0 0 40px;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: #f2ecff;
-  color: #7040d5;
-}
-
-.sales-hotel-card__copy {
-  flex: 1;
-  min-width: 0;
-}
-
-.sales-hotel-card__title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.sales-hotel-card__title-row > strong {
-  min-width: 0;
-  color: #30213d;
-  font-size: 15px;
-  line-height: 1.35;
-}
-
-.sales-hotel-card__address {
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-  margin-top: 7px;
-  color: #81768b;
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.sales-hotel-card__address svg {
-  flex: 0 0 auto;
-  margin-top: 1px;
-}
-
-.sales-hotel-status {
-  flex: 0 0 auto;
-  padding: 5px 8px;
-  border-radius: 999px;
-  background: #f2f0f4;
-  color: #62596b;
-  font-size: 10px;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.sales-hotel-status--assigned {
-  background: #edf3ff;
-  color: #375e9e;
-}
-
-.sales-hotel-status--visited {
-  background: #f1eff7;
-  color: #5d5270;
-}
-
-.sales-hotel-status--follow_up {
-  background: #fff3db;
-  color: #875900;
-}
-
-.sales-hotel-status--interested {
-  background: #e7f6ec;
-  color: #25623a;
-}
-
-.sales-hotel-status--not_interested {
-  background: #f7e8e8;
-  color: #8b3838;
-}
-
-.sales-hotel-status--onboarding_started,
-.sales-hotel-status--pending_review {
-  background: #efeaff;
-  color: #5a3da5;
-}
-
-.sales-hotel-status--approved {
-  background: #e8f7ef;
-  color: #236947;
-}
-
-.sales-hotel-card__meta {
-  display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-  gap: 10px;
-  margin-top: 16px;
-}
-
-.sales-hotel-card__meta > div {
-  padding: 11px 12px;
-  border-radius: 12px;
-  background: #faf9fc;
-}
-
-.sales-hotel-card__meta span {
-  display: block;
-  color: #91869b;
-  font-size: 10px;
-}
-
-.sales-hotel-card__meta strong {
-  display: block;
-  margin-top: 4px;
-  color: #493d53;
-  font-size: 12px;
-}
-
-.sales-hotel-follow-up,
-.sales-hotel-converted {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 12px;
-  padding: 9px 11px;
-  border-radius: 11px;
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.sales-hotel-follow-up {
-  background: #f4f1f8;
-  color: #675d71;
-}
-
-.sales-hotel-follow-up.is-overdue {
-  background: #fff3db;
-  color: #875900;
-}
-
-.sales-hotel-converted {
-  background: #eaf8ef;
-  color: #286741;
-}
-
-.sales-hotel-last-note {
-  display: flex;
-  align-items: flex-start;
-  gap: 7px;
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid #f0edf2;
-  color: #746a7d;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.sales-hotel-last-note svg {
-  flex: 0 0 auto;
-  margin-top: 2px;
-}
-
-.sales-hotels-empty {
-  display: flex;
-  min-height: 250px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 30px;
-  border: 1px dashed #dcd4e4;
-  border-radius: 18px;
-  background: #fff;
-  color: #7040d5;
-  text-align: center;
-}
-
-.sales-hotels-empty strong {
-  color: #382844;
-}
-
-.sales-hotels-empty span {
-  max-width: 340px;
-  color: #81768b;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-  .sales-hotels-page {
-    padding: 26px 20px 100px;
-  }
-
-  .sales-hotels-stats {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .sales-hotels-page {
-    padding:
-      22px 16px 108px;
-  }
-
-  .sales-hotels-header h1 {
-    font-size: 26px;
-  }
-
-  .sales-hotel-card {
-    padding: 15px;
-    border-radius: 16px;
-  }
 
   .sales-hotel-card__title-row {
-    display: block;
+    min-width: 0;
+
+    display: flex !important;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap:
+      7px
+      8px;
   }
+
+
+  .sales-hotel-card__title-row > strong {
+    max-width: 100%;
+
+    min-width: 0;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+    overflow-wrap: anywhere;
+  }
+
 
   .sales-hotel-status {
-    display: inline-block;
-    margin-top: 7px;
+    flex: 0 0 auto;
+
+    margin-top: 0 !important;
+
+    font-size: 10px;
   }
+
+
+  .sales-hotel-card__top > svg {
+    flex: 0 0 auto;
+
+    margin-left: auto;
+  }
+
+
+  /* =========================
+     DIRECCIÓN
+     ========================= */
+
+  .sales-hotel-card__address {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+  }
+
+
+  .sales-hotel-card__address span {
+    min-width: 0;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =========================
+     META
+     ========================= */
+
+  .sales-hotel-card__meta {
+    width: 100%;
+
+    min-width: 0;
+
+    margin-top: 14px;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      ) !important;
+
+    gap: 8px;
+  }
+
+
+  .sales-hotel-card__meta > div {
+    min-width: 0;
+
+    min-height: 48px;
+
+    padding:
+      10px
+      7px;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 6px;
+
+    text-align: center;
+  }
+
+
+  .sales-hotel-card__meta span,
+  .sales-hotel-card__meta strong {
+    display: inline !important;
+
+    margin: 0 !important;
+
+    line-height: 1.2;
+  }
+
+
+  .sales-hotel-card__meta span {
+    font-size: 10px;
+  }
+
+
+  .sales-hotel-card__meta strong {
+    font-size: 11px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     SEGUIMIENTO
+     ========================= */
+
+  .sales-hotel-follow-up,
+  .sales-hotel-converted {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 10px;
+
+    align-items: flex-start;
+
+    line-height: 1.4;
+  }
+
+
+  .sales-hotel-follow-up span {
+    min-width: 0;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =========================
+     HEADER MOBILE
+     ========================= */
+
+  .sales-mobile-nav {
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    left: 0 !important;
+
+    right: 0 !important;
+
+    padding-left: 16px !important;
+
+    padding-right: 16px !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden;
+  }
+
+
+  .sales-mobile-nav__brand {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+  }
+
+
+  .sales-mobile-nav__brand img {
+    width: 84px !important;
+
+    max-width: 84px !important;
+
+    height: auto !important;
+
+    flex: 0 0 auto;
+
+    object-fit: contain;
+  }
+
+
+  .sales-mobile-nav__brand span {
+    flex: 0 0 auto;
+  }
+
+
+  .sales-mobile-nav__toggle {
+    flex:
+      0
+      0
+      42px;
+  }
+
+
+  /* =========================================================
+     BOTTOM NAV MOBILE
+     ========================================================= */
+
+  html body #root .sales-bottom-nav {
+    position: fixed !important;
+
+    left: 50% !important;
+
+    right: auto !important;
+
+    bottom:
+      calc(
+        10px +
+        env(
+          safe-area-inset-bottom
+        )
+      ) !important;
+
+    top: auto !important;
+
+    width:
+      calc(
+        100vw -
+        24px
+      ) !important;
+
+    max-width:
+      calc(
+        100vw -
+        24px
+      ) !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 6px !important;
+
+    transform:
+      translateX(-50%) !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      ) !important;
+
+    gap: 5px;
+
+    box-sizing: border-box !important;
+
+    z-index: 3000 !important;
+
+    border:
+      1px solid
+      rgba(
+        102,
+        70,
+        160,
+        0.12
+      );
+
+    border-radius: 18px;
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.97
+      );
+
+    box-shadow:
+      0
+      12px
+      35px
+      rgba(
+        42,
+        24,
+        75,
+        0.14
+      );
+
+    backdrop-filter:
+      blur(14px);
+
+    -webkit-backdrop-filter:
+      blur(14px);
+
+    overflow: hidden !important;
+  }
+
+
+  html body #root
+  .sales-bottom-nav
+  > button {
+    position: static !important;
+
+    width: 100% !important;
+
+    min-width: 0 !important;
+
+    max-width: none !important;
+
+    min-height: 52px;
+
+    margin: 0 !important;
+
+    padding:
+      6px
+      4px !important;
+
+    transform: none !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 3px;
+
+    box-sizing: border-box !important;
+
+    border: 0 !important;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color: #84798f;
+
+    font: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+  }
+
+
+  html body #root
+  .sales-bottom-nav
+  > button
+  svg {
+    width: 19px !important;
+
+    height: 19px !important;
+
+    flex: 0 0 auto;
+  }
+
+
+  html body #root
+  .sales-bottom-nav
+  > button
+  span {
+    display: block !important;
+
+    width: auto !important;
+
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size: 10px !important;
+
+    line-height: 1.15 !important;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+  }
+
+
+  html body #root
+  .sales-bottom-nav
+  > button.is-active {
+    background: #f0eafd !important;
+
+    color: #7040d5 !important;
+  }
+
+
+  .sales-mobile-bottom-space {
+    height:
+      calc(
+        92px +
+        env(
+          safe-area-inset-bottom
+        )
+      ) !important;
+  }
+
 }
 
-.sales-hotel-card__meta > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 
-  text-align: center;
-}
+/* =========================================================
+   IPHONE PEQUEÑO
+   ========================================================= */
 
-.sales-hotel-card__meta span,
-.sales-hotel-card__meta strong {
-  display: inline;
-  margin: 0;
+@media (max-width: 390px) {
+
+  .sales-hotels-page {
+    padding-left: 12px !important;
+
+    padding-right: 12px !important;
+  }
+
+
+  .sales-hotels-filters {
+    width:
+      calc(
+        100% +
+        24px
+      );
+
+    margin-left: -12px;
+
+    margin-right: -12px;
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+  }
+
+
+  .sales-hotels-stats > div {
+    padding:
+      13px
+      11px;
+  }
+
+
+  .sales-hotel-card {
+    padding: 14px;
+  }
+
+
+  .sales-hotel-card__meta > div {
+    padding:
+      9px
+      5px;
+  }
+
+
+  .sales-hotel-card__meta span {
+    font-size: 9px;
+  }
+
+
+  .sales-hotel-card__meta strong {
+    font-size: 10px;
+  }
+
 }
