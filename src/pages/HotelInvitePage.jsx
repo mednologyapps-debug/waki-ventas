@@ -151,23 +151,31 @@ export default function HotelInvitePage() {
       return
     }
 
-    await claimInvite(pendingData)
+    await claimInvite(pendingData, inviteData)
   }
 
-  async function claimInvite(claimData) {
+  async function claimInvite(claimData, currentInvite = invite) {
     try {
       setSubmitting(true)
       setErrorMessage('')
       setSuccessMessage('')
 
+      const quickInvite = currentInvite?.source === 'quick'
       const { data, error } = await supabase.rpc(
-        'claim_sales_hotel_invite',
-        {
-          target_invite_token: token,
-          target_legal_name: claimData.legalName,
-          target_ruc: claimData.ruc,
-          target_phone: claimData.phone
-        }
+        quickInvite ? 'claim_quick_hotel_invitation' : 'claim_sales_hotel_invite',
+        quickInvite
+          ? {
+              p_token: token,
+              p_legal_name: claimData.legalName,
+              p_ruc: claimData.ruc,
+              p_phone: claimData.phone
+            }
+          : {
+              target_invite_token: token,
+              target_legal_name: claimData.legalName,
+              target_ruc: claimData.ruc,
+              target_phone: claimData.phone
+            }
       )
 
       if (error) throw error
@@ -177,14 +185,14 @@ export default function HotelInvitePage() {
       }
 
       setSuccessMessage(
-        'Tu acceso WAKI Hotel fue creado correctamente.'
+        'Tu acceso WAKI Hotel fue creado. Ingresa al Portal Hotel con el correo y la contraseña registrados.'
       )
 
-      setTimeout(() => {
-        navigate('/dashboard', {
-          replace: true
-        })
-      }, 700)
+      // The sales app does not have a /dashboard hotel route.
+      // Hotel sessions are independent across these browser origins.
+      window.setTimeout(() => {
+        window.location.assign('https://hotel.wakipe.com/login')
+      }, 1100)
 
       return data
     } catch (error) {
@@ -803,7 +811,7 @@ export default function HotelInvitePage() {
 
                   <span>
                     {invite?.district ||
-                      'Lima'}
+                      'Ubicación por completar'}
                   </span>
                 </div>
 
