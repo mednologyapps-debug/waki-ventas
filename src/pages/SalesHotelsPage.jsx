@@ -10,6 +10,7 @@ import {
   ChevronRight,
   Clock3,
   MapPin,
+  Plus,
   Search,
   UserCheck
 } from 'lucide-react'
@@ -27,6 +28,7 @@ import BottomNav
 
 import SalesSidebar
   from '../components/SalesSidebar'
+import QuickHotelInvitationDialog, { QuickHotelInvitationList } from '../components/QuickHotelInvitation'
 
 import '../sales-hotels.css'
 
@@ -191,6 +193,9 @@ export default function SalesHotelsPage() {
     setFilter
   ] =
     useState('all')
+
+  const [inviteOpen, setInviteOpen] = useState(false)
+  const [invitesVersion, setInvitesVersion] = useState(0)
 
 
   useEffect(() => {
@@ -465,10 +470,23 @@ export default function SalesHotelsPage() {
           </h1>
 
           <p>
-            Consulta los hoteles que ya forman parte de tu trabajo comercial sin volver a cargar el mapa.
+            Consulta tu cartera y registra nuevos hoteles sin salir de esta sección.
           </p>
 
+          <button type="button" className="sales-hotels-add-primary" onClick={() => setInviteOpen(true)}>
+            <Plus size={18} strokeWidth={2} />
+            Agregar hotel
+          </button>
         </header>
+
+        {inviteOpen && (
+          <QuickHotelInvitationDialog
+            onClose={() => setInviteOpen(false)}
+            onCreated={() => setInvitesVersion(v => v + 1)}
+          />
+        )}
+
+        <QuickHotelInvitationList refreshKey={invitesVersion} />
 
 
         {
