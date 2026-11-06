@@ -1193,9 +1193,7 @@ export default function SalesHotelDetailPage() {
 
     return (
 
-      `${window.location.origin}` +
-
-      `/hotel/invitacion/${token}`
+      `https://hotel.wakipe.com/invitacion/${token}`
 
     )
 

@@ -22,8 +22,8 @@ import SalesActiveRoutePage
   import SalesRoutesHistoryPage
   from './pages/SalesRoutesHistoryPage'
 
-  import HotelInvitePage
-  from './pages/HotelInvitePage'
+  import SalesHotelInviteBridge
+  from './pages/SalesHotelInviteBridge'
 
   
 
@@ -41,7 +41,7 @@ export default function App() {
       <Route
   path="/hotel/invitacion/:token"
   element={
-    <HotelInvitePage />
+    <SalesHotelInviteBridge />
   }
 />
 
