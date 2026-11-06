@@ -1,0 +1,23 @@
+name: WAKI Ventas · Build
+on:
+  pull_request:
+    branches: [main]
+    paths: ['src/**','package.json','package-lock.json','vite.config.js','.github/workflows/sales-build.yml']
+  push:
+    branches: [main]
+    paths: ['src/**','package.json','package-lock.json','vite.config.js','.github/workflows/sales-build.yml']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Build Ventas
+        run: npm run build
